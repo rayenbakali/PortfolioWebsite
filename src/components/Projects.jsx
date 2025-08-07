@@ -1,6 +1,6 @@
 import React from 'react'
 import ProjectsCard from './ProjectsCard'
-import { projects } from '@/config'
+import { projects } from '../config/data'
 import { Badge } from '@/components/ui/badge'
 
 const Projects = () => {
