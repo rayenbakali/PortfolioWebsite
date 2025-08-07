@@ -15,7 +15,7 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, [titles]);
   return (
-    <div id="home" className="h-[calc(100vh-100px)] p-0 flex items-center justify-center max-w-screen-xl">
+    <div id="home" className="p-0 flex items-center justify-center max-w-screen-xl">
       <div className="text-center">
         <HeroHighlight >
         <h1 className="text-4xl sm:text-5xl md:text-6xl md:leading-[1.2] font-bold">
@@ -32,7 +32,7 @@ const HeroSection = () => {
             {titles[titleIndex]}
           </motion.span>
         </h1>
-        <p className="mt-6 text-[17px] md:text-lg">
+        <p className="mt-6 px-10 text-[17px] md:text-lg">
           I'm a software engineer with a passion for building web applications
           and a freelance Graphic Designer
         </p>
