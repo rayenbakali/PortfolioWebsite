@@ -4,7 +4,7 @@ import Footer from "./components/Footer"
 import WorkTimeline from "./components/WorkTimeline"
 import { Separator } from "./components/ui/separator"
 import { TracingBeam } from "./components/ui/tracing-beam"
-
+import Projects from "./components/Projects"
 function App() {
   return (
     <>
@@ -13,6 +13,8 @@ function App() {
       <HeroSection id="home"/>
       <Separator />  
       <WorkTimeline id="about"/>
+      <Separator />
+      <Projects id="projects"/>
       <Separator />
       <Footer id="contact"/>
       </TracingBeam>
