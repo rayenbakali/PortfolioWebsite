@@ -1,22 +1,22 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown,Paintbrush } from "lucide-react";
-// eslint-disable-next-line no-unused-vars
-import { motion } from "framer-motion";
-import React, { useState, useEffect, useMemo} from "react";
+import { ArrowDown, Paintbrush } from "lucide-react";
+import { motion } from "motion/react";
+import React, { useState, useEffect, useMemo } from "react";
 import { HeroHighlight } from "./HeroHighlight";
 
-const HeroSection = () => {
+const HeroSection = ({ introDone = true }) => {
   const [titleIndex, setTitleIndex] = useState(0);
   const titles = useMemo(() => ["Software engineer", "Graphic designer", "Freelancer"], []);
   useEffect(() => {
+    if (!introDone) return;
     const interval = setInterval(() => {
       setTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
     }, 1500);
     return () => clearInterval(interval);
-  }, [titles]);
+  }, [titles, introDone]);
   return (
     <div id="home" className="p-0 flex items-center justify-center max-w-screen-xl">
-      <div className="text-center">
+      <div className="text-center w-full">
         <HeroHighlight >
         <h1 className="text-4xl sm:text-5xl md:text-6xl md:leading-[1.2] font-bold">
           Hi im Rayen Bakali
