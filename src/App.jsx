@@ -10,6 +10,7 @@ import Services from "./components/Services"
 import Partnerships from "./components/Partnerships"
 import Contact from "./components/Contact"
 import { PageIntro } from "./components/PageIntro"
+import { MangaCursorTrail } from "./components/MangaCursorTrail"
 
 function App() {
   const [introDone, setIntroDone] = useState(false)
@@ -27,6 +28,7 @@ function App() {
   return (
     <>
       {!introDone && <PageIntro onComplete={() => setIntroDone(true)} />}
+      {introDone && <MangaCursorTrail />}
       <Navbar />
       <TracingBeam className="mt-12">
         <HeroSection introDone={introDone} />
