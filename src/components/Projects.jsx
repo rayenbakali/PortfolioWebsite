@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/badge'
 const Projects = () => {
   return (
     <section id="projects" className="relative py-20 px-6">
-    <div className="max-w-screen-md mx-auto">
+    <div className="max-w-screen-lg mx-auto">
       <div className="text-center mb-12">
         <Badge variant="secondary" className="mb-4">
           Projects

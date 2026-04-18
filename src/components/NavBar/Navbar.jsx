@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { NavMenu } from "./nav-menu";
 import { Sidebar } from "./navigation-sheet";
 import { Github, Linkedin } from "lucide-react";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -18,16 +17,16 @@ const Navbar = () => {
           <NavMenu className="hidden md:block" />
             <div className="flex items-center gap-3">
             <Button variant="outline" className="rounded-full hover:animate-fade-in" onMouseEnter={() => setGithubhovered(true)} onMouseLeave={() => setGithubhovered(false)} asChild>
-              <Link to="https://github.com/rayenbakali">
+              <a href="https://github.com/rayenbakali" target="_blank" rel="noopener noreferrer">
                 <Github className="rounded-full" />
-                {Githubhovered?'Github':''}
-              </Link>
+                {Githubhovered ? "Github" : ""}
+              </a>
             </Button>
               <Button variant="outline" className="rounded-full hover:animate-fade-in" onMouseEnter={() => setLinkedinhovered(true)} onMouseLeave={() => setLinkedinhovered(false)} asChild>
-              <Link to="https://www.linkedin.com/in/rayenbakali/">
+              <a href="https://www.linkedin.com/in/rayenbakali/" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="rounded-full" />
-                {Linkedinhovered?'Linkedin':''}
-              </Link>
+                {Linkedinhovered ? "Linkedin" : ""}
+              </a>
             </Button>
             {/* Mobile Menu */}
             <div className="md:hidden">

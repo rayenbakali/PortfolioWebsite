@@ -26,7 +26,10 @@ const navLinks = [
     title: "Services",
     href: "#services",
   },
-  
+  {
+    title: "Contact",
+    href: "#contact",
+  },
 ];
 
 export const NavMenu = (props) => (

@@ -12,7 +12,7 @@ export const Sidebar = () => {
         </Button>
       </SheetTrigger>
       <SheetContent>
-        <h1 className="text-2xl font-bold">Rayen Bk</h1>
+        <h1 className="text-2xl font-bold">Rayen Bakali</h1>
         <NavMenu orientation="vertical" className="mt-12" />
       </SheetContent>
     </Sheet>

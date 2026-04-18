@@ -5,20 +5,30 @@ import WorkTimeline from "./components/WorkTimeline"
 import { Separator } from "./components/ui/separator"
 import { TracingBeam } from "./components/ui/tracing-beam"
 import Projects from "./components/Projects"
+import Services from "./components/Services"
+import Partnerships from "./components/Partnerships"
+import Contact from "./components/Contact"
+
 function App() {
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <TracingBeam className="mt-12">
-      <HeroSection id="home"/>
-      <Separator />  
-      <WorkTimeline id="about"/>
-      <Separator />
-      <Projects id="projects"/>
-      <Separator />
-      <Footer id="contact"/>
+        <HeroSection />
+        <Separator />
+        <WorkTimeline />
+        <Separator />
+        <Projects />
+        <Separator />
+        <Services />
+        <Separator />
+        <Partnerships />
+        <Separator />
+        <Contact />
+        <Separator />
+        <Footer />
       </TracingBeam>
-    </> 
+    </>
   );
 }
 

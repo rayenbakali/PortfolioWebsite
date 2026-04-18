@@ -8,13 +8,21 @@ const ProjectsCard = ({ image, title, description, technologies, liveUrl, github
         <div className="group relative flex flex-col overflow-hidden rounded-xl border border-accent transition-all hover:border-primary/50">
           {/* Thumbnail */}
           <div className="relative h-64 overflow-hidden bg-accent">
-            <img
-              src={image}
-              alt={title}
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
-              width={500}
-              height={500}
-            />
+            {image?.trim() ? (
+              <img
+                src={image}
+                alt={title}
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                width={500}
+                height={500}
+              />
+            ) : (
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-accent to-muted flex items-center justify-center p-6">
+                <span className="text-center text-sm font-medium text-muted-foreground leading-snug">
+                  {title}
+                </span>
+              </div>
+            )}
           </div>
     
           {/* Details */}
