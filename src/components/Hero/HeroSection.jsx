@@ -15,10 +15,13 @@ const HeroSection = ({ introDone = true }) => {
     return () => clearInterval(interval);
   }, [titles, introDone]);
   return (
-    <div id="home" className="p-0 flex items-center justify-center max-w-screen-xl">
-      <div className="text-center w-full">
-        <HeroHighlight >
-        <h1 className="text-4xl sm:text-5xl md:text-6xl md:leading-[1.2] font-bold">
+    <div
+      id="home"
+      className="mx-auto flex max-w-screen-xl items-center justify-center px-4 sm:px-6"
+    >
+      <div className="w-full text-center">
+        <HeroHighlight>
+        <h1 className="text-3xl font-bold leading-tight sm:text-5xl md:text-6xl md:leading-[1.2]">
           Hi im Rayen Bakali
         </h1>
         <h1 className="text-2xl font-bold">
@@ -32,20 +35,30 @@ const HeroSection = ({ introDone = true }) => {
             {titles[titleIndex]}
           </motion.span>
         </h1>
-        <p className="mt-6 px-10 text-[17px] md:text-lg">
+        <p className="mt-6 max-w-2xl px-1 text-base text-pretty sm:px-4 md:text-lg">
           I'm a software engineer with a passion for building web applications
           and a freelance Graphic Designer
         </p>
-        <div className="mt-12 flex items-center justify-center gap-4">
-          <Button size="lg" className="rounded-full text-base" onClick={() => window.location.href = "#about"}>
-              Get to know me <ArrowDown className="!h-5 !w-5" />
+        <div className="mt-10 flex w-full flex-col items-stretch justify-center gap-3 sm:mt-12 sm:flex-row sm:items-center sm:gap-4">
+          <Button
+            size="lg"
+            className="rounded-full text-base"
+            onClick={() => (window.location.href = "#about")}
+          >
+            Get to know me <ArrowDown className="!h-5 !w-5" />
           </Button>
-          <Button 
+          <Button
             variant="outline"
             size="lg"
             className="rounded-full text-base shadow-none"
+            asChild
+          >
+            <a
+              href="https://www.behance.net/lazerxtv"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2"
             >
-            <a href="https://www.behance.net/lazerxtv"  target="_blank" className="flex items-center gap-2">
               My other side
               <Paintbrush className="!h-5 !w-5" />
             </a>

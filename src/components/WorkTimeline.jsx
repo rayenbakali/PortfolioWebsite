@@ -5,7 +5,7 @@ import { experiences } from "../config/data";
 
 const WorkTimeline = () => {
   return (
-    <section id="about" className="relative py-20 px-6">
+    <section id="about" className="relative px-4 py-16 sm:px-6 sm:py-20">
       <div className="max-w-screen-lg mx-auto">
         <div className="text-center mb-12 ml-0">
           <Badge variant="secondary" className="mb-4">
@@ -20,7 +20,7 @@ const WorkTimeline = () => {
           </p>
         </div>
 
-        <div className="relative ml-3">
+        <div className="relative ml-2 sm:ml-3">
         {/* Timeline line */}
         <div className="absolute left-0 top-4 bottom-0 border-l-2" />
 

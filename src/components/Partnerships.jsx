@@ -4,7 +4,7 @@ import { partnershipHighlights } from "../config/data";
 
 const Partnerships = () => {
   return (
-    <section id="partnerships" className="relative py-20 px-6">
+    <section id="partnerships" className="relative px-4 py-16 sm:px-6 sm:py-20">
       <div className="max-w-screen-lg mx-auto">
         <div className="text-center mb-12">
           <Badge variant="secondary" className="mb-4">
