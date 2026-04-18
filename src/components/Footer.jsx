@@ -5,31 +5,17 @@ import {
 } from "lucide-react";
 
 const footerLinks = [
-  {
-    title: "Home",
-    href: "#home",
-  },
-  {
-    title: "About",
-    href: "#about",
-  },
-  {
-    title: "Projects",
-    href: "#projects",
-  },
-  {
-    title: "Services",
-    href: "#services",
-  },
-  {
-    title: "Contact",
-    href: "#contact",
-  },
+  { title: "Home", href: "#home" },
+  { title: "About", href: "#about" },
+  { title: "Projects", href: "#projects" },
+  { title: "Partnerships", href: "#partnerships" },
+  { title: "Services", href: "#services" },
+  { title: "Contact", href: "#contact" },
 ];
 
 const Footer = () => {
   return (
-    <div id="contact" className="flex flex-col">
+    <div className="flex flex-col">
       <Separator />
       <div className="grow bg-muted" />
       <footer>
@@ -56,14 +42,14 @@ const Footer = () => {
             {/* Copyright */}
             <span className="text-muted-foreground">
               &copy; {new Date().getFullYear()}{" "}
-              <a href="https://www.linkedin.com/in/rayen-bakali-50b987190/" className="font-bold hover:text-foreground" target="_blank">
+              <a href="https://www.linkedin.com/in/rayenbakali/" className="font-bold hover:text-foreground" target="_blank" rel="noopener noreferrer">
                 Rayen Bakali
               </a>
               . All rights reserved.
             </span>
 
             <div className="flex items-center gap-5 text-muted-foreground">
-              <a href="https://www.linkedin.com/in/rayen-bakali-50b987190/" target="_blank">
+              <a href="https://www.linkedin.com/in/rayenbakali/" target="_blank" rel="noopener noreferrer">
                 <LinkedinIcon className="h-5 w-5" />
               </a>
               <a href="https://github.com/rayenbakali" target="_blank">

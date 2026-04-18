@@ -5,8 +5,22 @@ import { experiences } from "../config/data";
 
 const WorkTimeline = () => {
   return (
-    <div id="about" className="max-w-screen-sm mx-auto py-12 md:py-20 px-6">
-      <div className="relative ml-3">
+    <section id="about" className="relative py-20 px-6">
+      <div className="max-w-screen-lg mx-auto">
+        <div className="text-center mb-12 ml-0">
+          <Badge variant="secondary" className="mb-4">
+            About
+          </Badge>
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight">
+            Experience
+          </h2>
+          <p className="text-muted-foreground mt-2 sm:mt-4 text-lg">
+            Roles that shaped how I ship products, from broadcast tooling to field
+            robotics.
+          </p>
+        </div>
+
+        <div className="relative ml-3">
         {/* Timeline line */}
         <div className="absolute left-0 top-4 bottom-0 border-l-2" />
 
@@ -51,8 +65,9 @@ const WorkTimeline = () => {
             </div>
           )
         )}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

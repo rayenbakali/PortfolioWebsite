@@ -1,8 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { NavMenu } from "./nav-menu";
 import { Sidebar } from "./navigation-sheet";
+import { Github, Linkedin } from "lucide-react";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [Githubhovered, setGithubhovered] = useState(false);
+  const [Linkedinhovered, setLinkedinhovered] = useState(false);
   return (
     <div className="bg-muted">
       <nav
@@ -11,8 +15,19 @@ const Navbar = () => {
           <h1 className="text-2xl font-bold">Rayen Bakali</h1>
           {/* Desktop Menu */}
           <NavMenu className="hidden md:block" />
-          <div className="flex items-center gap-3">
-            <Button className="rounded-full">Contact me</Button>
+            <div className="flex items-center gap-3">
+            <Button variant="outline" className="rounded-full hover:animate-fade-in" onMouseEnter={() => setGithubhovered(true)} onMouseLeave={() => setGithubhovered(false)} asChild>
+              <a href="https://github.com/rayenbakali" target="_blank" rel="noopener noreferrer">
+                <Github className="rounded-full" />
+                {Githubhovered ? "Github" : ""}
+              </a>
+            </Button>
+              <Button variant="outline" className="rounded-full hover:animate-fade-in" onMouseEnter={() => setLinkedinhovered(true)} onMouseLeave={() => setLinkedinhovered(false)} asChild>
+              <a href="https://www.linkedin.com/in/rayenbakali/" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="rounded-full" />
+                {Linkedinhovered ? "Linkedin" : ""}
+              </a>
+            </Button>
             {/* Mobile Menu */}
             <div className="md:hidden">
               <Sidebar />
