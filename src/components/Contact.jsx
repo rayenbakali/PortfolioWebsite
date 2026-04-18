@@ -4,7 +4,7 @@ import { Github, Linkedin } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="relative py-20 px-6">
+    <section id="contact" className="relative px-4 py-16 sm:px-6 sm:py-20">
       <div className="max-w-screen-lg mx-auto">
         <div className="rounded-2xl border border-border bg-muted/30 p-8 sm:p-12 text-center">
           <Badge variant="secondary" className="mb-4">

@@ -19,7 +19,7 @@ const Footer = () => {
       <Separator />
       <div className="grow bg-muted" />
       <footer>
-        <div className="max-w-screen-xl mx-auto">
+        <div className="mx-auto max-w-screen-xl px-4 sm:px-6">
           <div className="py-12 flex flex-col justify-start items-center">
 
          <h1 className="text-2xl font-bold">Rayen Bakali</h1>

@@ -30,7 +30,7 @@ function App() {
       {!introDone && <PageIntro onComplete={() => setIntroDone(true)} />}
       {introDone && <MangaCursorTrail />}
       <Navbar />
-      <TracingBeam className="mt-12">
+      <TracingBeam className="mt-12 w-full max-w-full px-4 sm:px-6">
         <HeroSection introDone={introDone} />
         <Separator />
         <WorkTimeline />
