@@ -1,7 +1,7 @@
 const experiences = [
   {
     title: "FullStack Web, ROS2 Developer",
-    company: "Trabotyx",
+    company: "TOR by Trabotyx",
     period: "2024 - Present",
     description:
       "Led the development of a real-time monitoring and control platform for weeding robots using Flask, ROS2, and React. Built secure backend services, integrated robot-side ROS2 nodes, and optimized for real-time data updates and user experience across various stakeholders.",
@@ -34,6 +34,15 @@ const experiences = [
 ];
 
 const projects = [
+  {
+    title: "Navero AI hiring platform",
+    description:
+      "All-in-one hiring platform that scores CVs, runs video screening, verifies skills, and structures interviews, taking teams from job post to shortlist in about three days.",
+    image: "/projects/navero.jpg",
+    technologies: ["Next.js", "React", "Tailwind CSS", "AI"],
+    liveUrl: "https://www.navero.me",
+    githubUrl: "",
+  },
   {
     title: "Agricultural robotics console",
     description:
@@ -108,6 +117,39 @@ const services = [
   },
 ];
 
+const partners = [
+  {
+    name: "TOR by Trabotyx",
+    logo: "/partners/tor.svg",
+    url: "https://tor.ag",
+    detail: "Precision laser weed control. I build the monitoring and control platform for the robots.",
+  },
+  {
+    name: "Darido",
+    logo: "/partners/darido.png",
+    url: "https://darido.net",
+    detail: "Handmade olive wood kitchenware, woven bags, and home textiles, shipped to the US.",
+  },
+  {
+    name: "Darido Tunisia",
+    logo: "/partners/darido.png",
+    url: "https://darido.tn",
+    detail: "Darido's Tunisian store for authentic, artisan-made crafts and textiles.",
+  },
+  {
+    name: "Binflow",
+    logo: "/partners/binflow.png",
+    url: "https://binflow.com",
+    detail: "Built the Binflow Services website.",
+  },
+  {
+    name: "A41 Studio",
+    logo: "/partners/a41-studio.jpg",
+    url: "https://www.instagram.com/a41.studio.tn/",
+    detail: "Studio based in Tunisia.",
+  },
+];
+
 const partnershipHighlights = [
   {
     label: "Product teams",
@@ -123,4 +165,4 @@ const partnershipHighlights = [
   },
 ];
 
-export { experiences, projects, services, partnershipHighlights };
+export { experiences, projects, services, partners, partnershipHighlights };

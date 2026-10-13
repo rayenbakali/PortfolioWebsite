@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
-import { Handshake } from "lucide-react";
-import { partnershipHighlights } from "../config/data";
+import { ArrowUpRight, Handshake } from "lucide-react";
+import { partners, partnershipHighlights } from "../config/data";
 
 const Partnerships = () => {
   return (
@@ -17,6 +17,36 @@ const Partnerships = () => {
             I partner with teams that need a senior generalist—shipping web products,
             tightening design systems, or connecting ROS-backed hardware to the browser.
           </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+          {partners.map((partner) => (
+            <a
+              key={partner.name}
+              href={partner.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group rounded-xl border border-border p-5 flex items-center gap-4 transition-colors hover:border-primary/40"
+            >
+              <div className="h-16 w-16 shrink-0 rounded-lg bg-white border border-border flex items-center justify-center p-2">
+                <img
+                  src={partner.logo}
+                  alt={`${partner.name} logo`}
+                  className="max-h-full max-w-full object-contain"
+                  loading="lazy"
+                />
+              </div>
+              <div className="min-w-0">
+                <div className="flex items-center gap-1 font-semibold">
+                  {partner.name}
+                  <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {partner.detail}
+                </p>
+              </div>
+            </a>
+          ))}
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
