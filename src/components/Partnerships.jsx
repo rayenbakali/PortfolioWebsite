@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { ArrowUpRight, Handshake } from "lucide-react";
+import { Handshake } from "lucide-react";
 import { partners, partnershipHighlights } from "../config/data";
 
 const Partnerships = () => {
@@ -30,27 +30,18 @@ const Partnerships = () => {
                   href={partner.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  title={partner.name}
+                  aria-label={partner.name}
                   aria-hidden={isClone || undefined}
                   tabIndex={isClone ? -1 : undefined}
-                  className={`group/card mr-4 w-72 shrink-0 rounded-xl border border-border p-5 flex items-center gap-4 transition-colors hover:border-primary/40 sm:w-80 ${isClone ? "motion-reduce:hidden" : ""}`}
+                  className={`mr-6 flex h-24 w-44 shrink-0 items-center justify-center rounded-xl border border-border bg-white p-4 transition-colors hover:border-primary/40 ${isClone ? "motion-reduce:hidden" : ""}`}
                 >
-                  <div className="h-16 w-16 shrink-0 rounded-lg bg-white border border-border flex items-center justify-center p-2">
-                    <img
-                      src={partner.logo}
-                      alt={isClone ? "" : `${partner.name} logo`}
-                      className="max-h-full max-w-full object-contain"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="min-w-0">
-                    <div className="flex items-center gap-1 font-semibold">
-                      {partner.name}
-                      <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-transform group-hover/card:-translate-y-0.5 group-hover/card:translate-x-0.5" />
-                    </div>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {partner.detail}
-                    </p>
-                  </div>
+                  <img
+                    src={partner.logo}
+                    alt={isClone ? "" : `${partner.name} logo`}
+                    className="max-h-full max-w-full object-contain"
+                    loading="lazy"
+                  />
                 </a>
               );
             })}

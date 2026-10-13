@@ -122,31 +122,26 @@ const partners = [
     name: "TOR by Trabotyx",
     logo: "/partners/tor.svg",
     url: "https://tor.ag",
-    detail: "Precision laser weed control. I build the monitoring and control platform for the robots.",
   },
   {
     name: "Darido",
     logo: "/partners/darido.png",
     url: "https://darido.net",
-    detail: "Handmade olive wood kitchenware, woven bags, and home textiles, shipped to the US.",
   },
   {
     name: "Darido Tunisia",
     logo: "/partners/darido.png",
     url: "https://darido.tn",
-    detail: "Darido's Tunisian store for authentic, artisan-made crafts and textiles.",
   },
   {
     name: "Binflow",
     logo: "/partners/binflow.png",
     url: "https://binflow.com",
-    detail: "Built the Binflow Services website.",
   },
   {
     name: "A41 Studio",
     logo: "/partners/a41-studio.jpg",
     url: "https://www.instagram.com/a41.studio.tn/",
-    detail: "Studio based in Tunisia.",
   },
 ];
 
