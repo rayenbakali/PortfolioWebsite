@@ -11,20 +11,67 @@ const experiences = [
     title: "Software Engineer",
     company: "TOR by Trabotyx",
     companyUrl: "https://tor.ag",
+    logo: "/partners/tor.svg",
     location: "Utrecht, Netherlands",
     period: "Jan 2024 - Present",
+    current: true,
     description:
-      "Built the proof of concept for a real-time monitoring and control platform for weeding robots with Python, ROS2, and React. Led the end-to-end UI/UX for farmers, operators, and engineers, integrated ROS2 nodes for robot control and data collection, and built backend services for authentication, persistent storage, and real-time socket communication, tuned for low latency in the field.",
-    technologies: ["React", "Python", "Flask", "ROS2", "WebSockets"],
+      "Engineering the web and robotics platform behind TOR's laser-weeding robots, and leading its end-to-end UI/UX for farmers, operators, and engineers.",
+    highlights: [
+      {
+        label: "Real-time control platform",
+        text: "Built and maintained the web and robotics platform that runs agricultural robot operations day to day.",
+      },
+      {
+        label: "ROS2 ↔ web bridge",
+        text: "Designed the integration layer that streams live telemetry to the browser and sends commands back to the robots.",
+      },
+      {
+        label: "Operator dashboards",
+        text: "Developed field monitoring and control UIs with React, Flask, and WebSockets.",
+      },
+      {
+        label: "Multi-actor sockets",
+        text: "Implemented a socket architecture that keeps operators, engineers, and farmers in sync on the same robots.",
+      },
+      {
+        label: "GPS/RTK and sensor streaming",
+        text: "Worked across cloud and on-robot systems to stream and visualize positioning and sensor data.",
+      },
+      {
+        label: "Field-grade reliability",
+        text: "Cut latency and hardened the system for real-time robotic operations in field conditions.",
+      },
+    ],
+    technologies: ["React", "Python", "Flask", "ROS2", "WebSockets", "GPS/RTK"],
   },
   {
     title: "Full Stack Developer | UI/UX",
     company: "Darido",
     companyUrl: "https://darido.net",
+    logo: "/partners/darido.png",
     location: "Munich, Germany",
     period: "Jun 2022 - Dec 2023",
     description:
-      "Developed the full-stack e-commerce site with React, Express, Node, and MongoDB, and designed its UI. Drove SEO to #1 search rankings and optimized site speed with Lighthouse, built responsive modular React components, and ran usability testing with the UX team.",
+      "Designed and built Darido's e-commerce experience end to end, from the first wireframe to the production stack.",
+    highlights: [
+      {
+        label: "Full-stack storefront",
+        text: "Developed the e-commerce site on React, Express, Node, and MongoDB.",
+      },
+      {
+        label: "#1 search rankings",
+        text: "Led SEO work that took the store to the top of search results.",
+      },
+      {
+        label: "Performance",
+        text: "Optimized site speed with Lighthouse audits and lean, modular React components.",
+      },
+      {
+        label: "Design-led UX",
+        text: "Crafted responsive UIs and ran usability testing alongside the UX designers.",
+      },
+    ],
     technologies: ["React", "Express.js", "MongoDB", "Node.js", "SEO", "Lighthouse"],
   },
   {
@@ -34,7 +81,17 @@ const experiences = [
     location: "Tunis, Tunisia",
     period: "Feb 2021 - Jun 2021",
     description:
-      "Developed the ONT website, including a landing page and a custom chatbot API, and engineered a frequency management platform for TV channels and radio stations with map-based views.",
+      "Shipped web tools for Tunisia's national broadcasting office, from its public site to internal frequency planning.",
+    highlights: [
+      {
+        label: "ONT website",
+        text: "Developed the public landing page with a custom chatbot API.",
+      },
+      {
+        label: "Frequency management platform",
+        text: "Engineered a map-based tool for planning TV and radio frequencies with React, Node, MongoDB, and Google Maps.",
+      },
+    ],
     technologies: ["React", "Node.js", "Express", "MongoDB", "Google Maps API"],
   },
   {
@@ -43,8 +100,27 @@ const experiences = [
     companyUrl: links.upwork,
     location: "Remote",
     period: "Jan 2020 - Present",
+    current: true,
     description:
-      "Brand identity, logos, and visual branding; React landing pages with SEO, responsive design, and A/B testing; UI/UX wireframes and usability testing; and Adobe Photoshop tutoring.",
+      "Independent design and development work for clients on Upwork, from brand identity to production websites.",
+    highlights: [
+      {
+        label: "Brand identity",
+        text: "Logos, visual branding, and graphic design that give clients a consistent look.",
+      },
+      {
+        label: "Landing pages",
+        text: "Responsive React sites built for search, with A/B testing to improve conversion.",
+      },
+      {
+        label: "UI/UX",
+        text: "Wireframes and usability testing that turn ideas into clear interfaces.",
+      },
+      {
+        label: "Photoshop tutoring",
+        text: "One-on-one Adobe Photoshop coaching.",
+      },
+    ],
     technologies: ["React", "JavaScript", "Figma", "Photoshop", "Illustrator"],
   },
 ];
