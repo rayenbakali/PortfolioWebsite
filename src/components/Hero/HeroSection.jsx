@@ -22,7 +22,7 @@ const HeroSection = ({ introDone = true }) => {
       <div className="w-full text-center">
         <HeroHighlight>
         <h1 className="text-3xl font-bold leading-tight sm:text-5xl md:text-6xl md:leading-[1.2]">
-          Hi im Rayen Bakali
+          Hi, I&apos;m Rayen Bakali
         </h1>
         <h1 className="text-2xl font-bold">
           <motion.span
@@ -36,8 +36,8 @@ const HeroSection = ({ introDone = true }) => {
           </motion.span>
         </h1>
         <p className="mt-6 max-w-2xl px-1 text-base text-pretty sm:px-4 md:text-lg">
-          I'm a software engineer with a passion for building web applications
-          and a freelance Graphic Designer
+          I&apos;m a full-stack software engineer building real-time web apps and
+          robotics interfaces, and a freelance graphic designer on the side.
         </p>
         <div className="mt-10 flex w-full flex-col items-stretch justify-center gap-3 sm:mt-12 sm:flex-row sm:items-center sm:gap-4">
           <Button

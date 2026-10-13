@@ -50,7 +50,7 @@ const projects = [
     image: "",
     technologies: ["React", "Express.js", "MongoDB", "Node.js", "Stripe"],
     liveUrl: "",
-    githubUrl: "",
+    githubUrl: "https://github.com/rayenbakali/MernEcommerce",
   },
   {
     title: "Broadcast operations toolkit",
