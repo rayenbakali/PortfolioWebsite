@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Briefcase, Github, Linkedin, Mail } from "lucide-react";
+import { Briefcase, Github, Linkedin, Mail, Phone } from "lucide-react";
 import { links } from "../config/data";
 
 const Contact = () => {
@@ -19,11 +19,27 @@ const Contact = () => {
             roles. Tell me what you&apos;re building—I&apos;ll respond within a couple
             of days.
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-x-6 gap-y-2 text-sm">
+            <a href={`mailto:${links.email}`} className="inline-flex items-center gap-2 font-medium hover:underline underline-offset-4">
+              <Mail className="h-4 w-4 text-muted-foreground" />
+              {links.email}
+            </a>
+            <a href={`tel:${links.phone}`} className="inline-flex items-center gap-2 font-medium hover:underline underline-offset-4">
+              <Phone className="h-4 w-4 text-muted-foreground" />
+              {links.phoneDisplay}
+            </a>
+          </div>
+          <div className="mt-6 flex-wrap flex flex-col sm:flex-row items-center justify-center gap-3">
             <Button size="lg" className="rounded-full" asChild>
               <a href={`mailto:${links.email}`}>
                 <Mail className="mr-2 h-4 w-4" />
                 Email me
+              </a>
+            </Button>
+            <Button size="lg" variant="outline" className="rounded-full shadow-none" asChild>
+              <a href={`tel:${links.phone}`}>
+                <Phone className="mr-2 h-4 w-4" />
+                Call me
               </a>
             </Button>
             <Button size="lg" variant="outline" className="rounded-full shadow-none" asChild>

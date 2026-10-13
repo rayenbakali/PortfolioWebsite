@@ -1,5 +1,7 @@
 const links = {
   email: "rayen.bakali@gmail.com",
+  phone: "+31627558810",
+  phoneDisplay: "+31 6 27 55 88 10",
   linkedin: "https://www.linkedin.com/in/rayen-bakali-50b987190/",
   github: "https://github.com/rayenbakali",
   behance: "https://www.behance.net/lazerxtv",
