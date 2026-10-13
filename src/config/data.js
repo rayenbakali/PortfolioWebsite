@@ -1,35 +1,105 @@
+const links = {
+  email: "rayen.bakali@gmail.com",
+  linkedin: "https://www.linkedin.com/in/rayen-bakali-50b987190/",
+  github: "https://github.com/rayenbakali",
+  behance: "https://www.behance.net/lazerxtv",
+  upwork: "https://www.upwork.com/freelancers/~01b3d5087b7fde23b7",
+};
+
 const experiences = [
   {
     title: "Software Engineer",
     company: "TOR by Trabotyx",
-    period: "2024 - Present",
+    companyUrl: "https://tor.ag",
+    location: "Utrecht, Netherlands",
+    period: "Jan 2024 - Present",
     description:
-      "Led the development of a real-time monitoring and control platform for weeding robots using Flask, ROS2, and React. Built secure backend services, integrated robot-side ROS2 nodes, and optimized for real-time data updates and user experience across various stakeholders.",
-    technologies: ["React", "Flask", "ROS2", "WebSockets", "Python"],
+      "Built the proof of concept for a real-time monitoring and control platform for weeding robots with Python, ROS2, and React. Led the end-to-end UI/UX for farmers, operators, and engineers, integrated ROS2 nodes for robot control and data collection, and built backend services for authentication, persistent storage, and real-time socket communication, tuned for low latency in the field.",
+    technologies: ["React", "Python", "Flask", "ROS2", "WebSockets"],
   },
   {
-    title: "Web Designer, Developer",
+    title: "Full Stack Developer | UI/UX",
     company: "Darido",
-    period: "2022 - 2023",
+    companyUrl: "https://darido.net",
+    location: "Munich, Germany",
+    period: "Jun 2022 - Dec 2023",
     description:
-      "Developed a full-stack E-Commerce platform using the MERN stack. Improved SEO performance and page load speeds. Collaborated closely with UX designers and implemented reusable React components.",
-    technologies: ["React", "Express.js", "MongoDB", "Node.js", "HTML", "CSS", "JavaScript"],
+      "Developed the full-stack e-commerce site with React, Express, Node, and MongoDB, and designed its UI. Drove SEO to #1 search rankings and optimized site speed with Lighthouse, built responsive modular React components, and ran usability testing with the UX team.",
+    technologies: ["React", "Express.js", "MongoDB", "Node.js", "SEO", "Lighthouse"],
   },
   {
-    title: "Web Developer Intern",
+    title: "Full Stack Developer, Intern",
     company: "National Television Broadcasting Office",
-    period: "2021",
+    companyUrl: "https://www.telediffusion.net.tn/",
+    location: "Tunis, Tunisia",
+    period: "Feb 2021 - Jun 2021",
     description:
-      "Built internal TV broadcasting tools using React and Node.js. Developed a landing page and a frequency management system for TV channels and radio stations.",
+      "Developed the ONT website, including a landing page and a custom chatbot API, and engineered a frequency management platform for TV channels and radio stations with map-based views.",
     technologies: ["React", "Node.js", "Express", "MongoDB", "Google Maps API"],
   },
   {
-    title: "Freelancer",
-    company: "Self-Employed",
-    period: "2020 - Present",
+    title: "Freelance Designer & Developer",
+    company: "Upwork",
+    companyUrl: links.upwork,
+    location: "Remote",
+    period: "Jan 2020 - Present",
     description:
-      "Worked as a full-stack and design freelancer. Delivered branding, landing pages, UX/UI audits, and full websites using modern JS frameworks and SEO techniques.",
+      "Brand identity, logos, and visual branding; React landing pages with SEO, responsive design, and A/B testing; UI/UX wireframes and usability testing; and Adobe Photoshop tutoring.",
     technologies: ["React", "JavaScript", "Figma", "Photoshop", "Illustrator"],
+  },
+];
+
+const skills = [
+  {
+    label: "Languages & frameworks",
+    items: ["JavaScript", "Python", "React", "Next.js", "Angular", "Node.js", "Express", "Zustand", "ROS2"],
+  },
+  {
+    label: "Data",
+    items: ["MongoDB", "MySQL", "NoSQL"],
+  },
+  {
+    label: "Practices",
+    items: ["DevOps", "CI/CD", "Jest", "Unit testing", "OOP", "Git", "SEO"],
+  },
+  {
+    label: "Design",
+    items: ["UI/UX", "Graphic design", "Brand identity", "Figma", "Photoshop"],
+  },
+  {
+    label: "Spoken languages",
+    items: ["English", "French", "Arabic"],
+  },
+];
+
+const education = [
+  {
+    degree: "Software Engineering Degree",
+    school: "Private Advanced School of Engineering and Technology",
+    location: "Ghazela, Tunis",
+    period: "2021 - Present",
+    detail: "Major in Web and Internet Technologies",
+  },
+  {
+    degree: "Bachelor in Computer Science",
+    school: "University of Science Tunis El Manar",
+    location: "Tunis",
+    period: "2018 - 2021",
+    detail: "Major in Computer Engineering",
+  },
+];
+
+const achievements = [
+  {
+    title: "Second prize, best SDG project",
+    detail: "Hackathon organized by SSD Team",
+    date: "Mar 2023",
+  },
+  {
+    title: "JavaScript Algorithms and Data Structures",
+    detail: "freeCodeCamp certification",
+    date: "Sep 2023",
+    url: "https://www.freecodecamp.org/certification/rayenbakali/javascript-algorithms-and-data-structures",
   },
 ];
 
@@ -146,4 +216,14 @@ const partnershipHighlights = [
   },
 ];
 
-export { experiences, projects, services, partners, partnershipHighlights };
+export {
+  links,
+  experiences,
+  skills,
+  education,
+  achievements,
+  projects,
+  services,
+  partners,
+  partnershipHighlights,
+};

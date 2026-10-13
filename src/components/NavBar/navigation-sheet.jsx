@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/sheet";
 import { Github, Linkedin, Menu } from "lucide-react";
 import { navLinks } from "./nav-menu";
+import { links } from "../../config/data";
 
 export const Sidebar = () => {
   return (
@@ -55,7 +56,7 @@ export const Sidebar = () => {
         <SheetFooter className="mt-auto flex flex-row flex-wrap items-center justify-center gap-3 border-t px-6 pb-[max(1rem,env(safe-area-inset-bottom))] pt-4 sm:justify-start">
           <Button variant="outline" size="icon" className="rounded-full" asChild>
             <a
-              href="https://github.com/rayenbakali"
+              href={links.github}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -65,7 +66,7 @@ export const Sidebar = () => {
           </Button>
           <Button variant="outline" size="icon" className="rounded-full" asChild>
             <a
-              href="https://www.linkedin.com/in/rayenbakali/"
+              href={links.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"

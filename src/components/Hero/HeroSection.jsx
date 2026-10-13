@@ -3,6 +3,7 @@ import { ArrowDown, Paintbrush } from "lucide-react";
 import { motion } from "motion/react";
 import React, { useState, useEffect, useMemo } from "react";
 import { HeroHighlight } from "./HeroHighlight";
+import { links } from "../../config/data";
 
 const HeroSection = ({ introDone = true }) => {
   const [titleIndex, setTitleIndex] = useState(0);
@@ -36,8 +37,8 @@ const HeroSection = ({ introDone = true }) => {
           </motion.span>
         </h1>
         <p className="mt-6 max-w-2xl px-1 text-base text-pretty sm:px-4 md:text-lg">
-          I&apos;m a full-stack software engineer building real-time web apps and
-          robotics interfaces, and a freelance graphic designer on the side.
+          I&apos;m a full-stack software engineer in Utrecht, building real-time web
+          apps and robotics interfaces, and a freelance graphic designer on the side.
         </p>
         <div className="mt-10 flex w-full flex-col items-stretch justify-center gap-3 sm:mt-12 sm:flex-row sm:items-center sm:gap-4">
           <Button
@@ -54,7 +55,7 @@ const HeroSection = ({ introDone = true }) => {
             asChild
           >
             <a
-              href="https://www.behance.net/lazerxtv"
+              href={links.behance}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2"

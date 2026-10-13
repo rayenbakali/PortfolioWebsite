@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { NavMenu } from "./nav-menu";
 import { Sidebar } from "./navigation-sheet";
 import { Github, Linkedin } from "lucide-react";
+import { links } from "../../config/data";
 
 const Navbar = () => {
   return (
@@ -22,7 +23,7 @@ const Navbar = () => {
               asChild
             >
               <a
-                href="https://github.com/rayenbakali"
+                href={links.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
@@ -37,7 +38,7 @@ const Navbar = () => {
               asChild
             >
               <a
-                href="https://www.linkedin.com/in/rayenbakali/"
+                href={links.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
