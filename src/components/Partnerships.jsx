@@ -2,6 +2,10 @@ import { Badge } from "@/components/ui/badge";
 import { Handshake } from "lucide-react";
 import { partners, partnershipHighlights } from "../config/data";
 
+// Repeat the logos so one loop is wider than the widest container,
+// otherwise a gap shows before the marquee wraps around.
+const marqueeSet = Array.from({ length: 3 }, () => partners).flat();
+
 const Partnerships = () => {
   return (
     <section id="partnerships" className="relative px-4 py-16 sm:px-6 sm:py-20">
@@ -20,9 +24,9 @@ const Partnerships = () => {
         </div>
 
         <div className="group relative mb-12 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)] motion-reduce:overflow-x-auto">
-          {/* Two copies of the list so translating by -50% loops seamlessly */}
+          {/* Two copies of the set so translating by -50% loops seamlessly */}
           <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] motion-reduce:animate-none">
-            {[...partners, ...partners].map((partner, index) => {
+            {[...marqueeSet, ...marqueeSet].map((partner, index) => {
               const isClone = index >= partners.length;
               return (
                 <a
@@ -34,7 +38,7 @@ const Partnerships = () => {
                   aria-label={partner.name}
                   aria-hidden={isClone || undefined}
                   tabIndex={isClone ? -1 : undefined}
-                  className={`mr-6 flex h-24 w-44 shrink-0 items-center justify-center rounded-xl border border-border bg-white p-4 transition-colors hover:border-primary/40 ${isClone ? "motion-reduce:hidden" : ""}`}
+                  className={`mr-6 flex h-24 w-44 shrink-0 items-center justify-center p-4 transition-opacity hover:opacity-80 ${isClone ? "motion-reduce:hidden" : ""}`}
                 >
                   <img
                     src={partner.logo}

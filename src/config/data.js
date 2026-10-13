@@ -129,11 +129,6 @@ const partners = [
     url: "https://darido.net",
   },
   {
-    name: "Darido Tunisia",
-    logo: "/partners/darido.png",
-    url: "https://darido.tn",
-  },
-  {
     name: "Binflow",
     logo: "/partners/binflow.png",
     url: "https://binflow.com",
