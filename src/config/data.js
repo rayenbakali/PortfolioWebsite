@@ -44,6 +44,24 @@ const projects = [
     githubUrl: "",
   },
   {
+    title: "Makni Studio photography portfolio",
+    description:
+      "Portfolio site for photographer Ibrahim Makni: full-bleed hero slider, event gallery, and a contact form wired to email through Nodemailer.",
+    image: "/projects/makni-studio.jpg",
+    technologies: ["HTML", "CSS", "JavaScript", "Node.js", "Nodemailer"],
+    liveUrl: "https://makni-gallery-website2.vercel.app",
+    githubUrl: "",
+  },
+  {
+    title: "Hassine Sioud key grip portfolio",
+    description:
+      "Personal site for a Tunisian film key grip: project credits, on-set galleries, light/dark theme, and an EmailJS contact form, with SEO meta via React Helmet.",
+    image: "/projects/hassine-sioud.jpg",
+    technologies: ["React", "React Bootstrap", "EmailJS", "React Helmet"],
+    liveUrl: "https://hassin-sioud.vercel.app",
+    githubUrl: "",
+  },
+  {
     title: "MERN e-commerce storefront",
     description:
       "Full-stack shop with product catalog, checkout flows, and admin tools. Focus on SEO, performance budgets, and reusable UI primitives shared across marketing and app surfaces.",
