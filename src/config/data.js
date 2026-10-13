@@ -88,15 +88,6 @@ const projects = [
     liveUrl: "",
     githubUrl: "",
   },
-  {
-    title: "Design-led marketing sites",
-    description:
-      "Landing pages and brand refreshes for clients—component-driven layouts, motion where it helps conversion, and handoff-friendly specs for engineering.",
-    image: "",
-    technologies: ["React", "Next.js", "Tailwind CSS", "Figma"],
-    liveUrl: "https://www.behance.net/lazerxtv",
-    githubUrl: "",
-  },
 ];
 
 const services = [
