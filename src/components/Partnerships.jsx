@@ -19,34 +19,42 @@ const Partnerships = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
-          {partners.map((partner) => (
-            <a
-              key={partner.name}
-              href={partner.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group rounded-xl border border-border p-5 flex items-center gap-4 transition-colors hover:border-primary/40"
-            >
-              <div className="h-16 w-16 shrink-0 rounded-lg bg-white border border-border flex items-center justify-center p-2">
-                <img
-                  src={partner.logo}
-                  alt={`${partner.name} logo`}
-                  className="max-h-full max-w-full object-contain"
-                  loading="lazy"
-                />
-              </div>
-              <div className="min-w-0">
-                <div className="flex items-center gap-1 font-semibold">
-                  {partner.name}
-                  <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                </div>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {partner.detail}
-                </p>
-              </div>
-            </a>
-          ))}
+        <div className="group relative mb-12 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)] motion-reduce:overflow-x-auto">
+          {/* Two copies of the list so translating by -50% loops seamlessly */}
+          <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] motion-reduce:animate-none">
+            {[...partners, ...partners].map((partner, index) => {
+              const isClone = index >= partners.length;
+              return (
+                <a
+                  key={`${partner.name}-${index}`}
+                  href={partner.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-hidden={isClone || undefined}
+                  tabIndex={isClone ? -1 : undefined}
+                  className={`group/card mr-4 w-72 shrink-0 rounded-xl border border-border p-5 flex items-center gap-4 transition-colors hover:border-primary/40 sm:w-80 ${isClone ? "motion-reduce:hidden" : ""}`}
+                >
+                  <div className="h-16 w-16 shrink-0 rounded-lg bg-white border border-border flex items-center justify-center p-2">
+                    <img
+                      src={partner.logo}
+                      alt={isClone ? "" : `${partner.name} logo`}
+                      className="max-h-full max-w-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-1 font-semibold">
+                      {partner.name}
+                      <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-transform group-hover/card:-translate-y-0.5 group-hover/card:translate-x-0.5" />
+                    </div>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {partner.detail}
+                    </p>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
