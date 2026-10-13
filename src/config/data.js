@@ -76,7 +76,7 @@ const projects = [
       "Full-stack shop with product catalog, checkout flows, and admin tools. Focus on SEO, performance budgets, and reusable UI primitives shared across marketing and app surfaces.",
     image: "",
     technologies: ["React", "Express.js", "MongoDB", "Node.js", "Stripe"],
-    liveUrl: "",
+    liveUrl: "https://darido.net",
     githubUrl: "https://github.com/rayenbakali/MernEcommerce",
   },
   {
