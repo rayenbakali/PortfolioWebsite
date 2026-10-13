@@ -1,9 +1,26 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Briefcase, Github, Linkedin, Mail, Phone } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Briefcase, Check, Github, Linkedin, Mail, Phone } from "lucide-react";
 import { links } from "../config/data";
 
 const Contact = () => {
+  const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    if (!copied) return;
+    const timeout = window.setTimeout(() => setCopied(false), 2000);
+    return () => window.clearTimeout(timeout);
+  }, [copied]);
+
+  // mailto: does nothing without a mail app set up, so also copy the address
+  const handleEmailClick = () => {
+    navigator.clipboard
+      ?.writeText(links.email)
+      .then(() => setCopied(true))
+      .catch(() => {});
+  };
+
   return (
     <section id="contact" className="relative px-4 py-16 sm:px-6 sm:py-20">
       <div className="max-w-screen-lg mx-auto">
@@ -31,9 +48,13 @@ const Contact = () => {
           </div>
           <div className="mt-6 flex-wrap flex flex-col sm:flex-row items-center justify-center gap-3">
             <Button size="lg" className="rounded-full" asChild>
-              <a href={`mailto:${links.email}`}>
-                <Mail className="mr-2 h-4 w-4" />
-                Email me
+              <a href={`mailto:${links.email}`} onClick={handleEmailClick}>
+                {copied ? (
+                  <Check className="mr-2 h-4 w-4" />
+                ) : (
+                  <Mail className="mr-2 h-4 w-4" />
+                )}
+                {copied ? "Email copied!" : "Email me"}
               </a>
             </Button>
             <Button size="lg" variant="outline" className="rounded-full shadow-none" asChild>
