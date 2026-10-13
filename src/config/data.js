@@ -1,6 +1,6 @@
 const experiences = [
   {
-    title: "FullStack Web, ROS2 Developer",
+    title: "Software Engineer",
     company: "TOR by Trabotyx",
     period: "2024 - Present",
     description:
