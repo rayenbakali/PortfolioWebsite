@@ -3,6 +3,7 @@ import Navbar from "./components/NavBar/Navbar"
 import HeroSection from "./components/Hero/HeroSection"
 import Footer from "./components/Footer"
 import WorkTimeline from "./components/WorkTimeline"
+import Background from "./components/Background"
 import { Separator } from "./components/ui/separator"
 import { TracingBeam } from "./components/ui/tracing-beam"
 import Projects from "./components/Projects"
@@ -34,6 +35,8 @@ function App() {
         <HeroSection introDone={introDone} />
         <Separator />
         <WorkTimeline />
+        <Separator />
+        <Background />
         <Separator />
         <Projects />
         <Separator />

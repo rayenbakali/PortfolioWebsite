@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github, Linkedin } from "lucide-react";
+import { Briefcase, Github, Linkedin, Mail } from "lucide-react";
+import { links } from "../config/data";
 
 const Contact = () => {
   return (
@@ -18,13 +19,16 @@ const Contact = () => {
             roles. Tell me what you&apos;re building—I&apos;ll respond within a couple
             of days.
           </p>
-          <p className="text-muted-foreground text-sm mt-4 max-w-md mx-auto">
-            Prefer email? Message me on LinkedIn and I&apos;ll share the best address.
-          </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Button size="lg" className="rounded-full" asChild>
+              <a href={`mailto:${links.email}`}>
+                <Mail className="mr-2 h-4 w-4" />
+                Email me
+              </a>
+            </Button>
+            <Button size="lg" variant="outline" className="rounded-full shadow-none" asChild>
               <a
-                href="https://www.linkedin.com/in/rayenbakali/"
+                href={links.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -34,12 +38,18 @@ const Contact = () => {
             </Button>
             <Button size="lg" variant="outline" className="rounded-full shadow-none" asChild>
               <a
-                href="https://github.com/rayenbakali"
+                href={links.github}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Github className="mr-2 h-4 w-4" />
                 GitHub
+              </a>
+            </Button>
+            <Button size="lg" variant="outline" className="rounded-full shadow-none" asChild>
+              <a href={links.upwork} target="_blank" rel="noopener noreferrer">
+                <Briefcase className="mr-2 h-4 w-4" />
+                Upwork
               </a>
             </Button>
           </div>

@@ -1,6 +1,10 @@
 import { Badge } from "@/components/ui/badge";
 import { Handshake } from "lucide-react";
-import { partnershipHighlights } from "../config/data";
+import { partners, partnershipHighlights } from "../config/data";
+
+// Repeat the logos so one loop is wider than the widest container,
+// otherwise a gap shows before the marquee wraps around.
+const marqueeSet = Array.from({ length: 3 }, () => partners).flat();
 
 const Partnerships = () => {
   return (
@@ -17,6 +21,35 @@ const Partnerships = () => {
             I partner with teams that need a senior generalist—shipping web products,
             tightening design systems, or connecting ROS-backed hardware to the browser.
           </p>
+        </div>
+
+        <div className="group relative mb-12 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)] motion-reduce:overflow-x-auto">
+          {/* Two copies of the set so translating by -50% loops seamlessly */}
+          <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] motion-reduce:animate-none">
+            {[...marqueeSet, ...marqueeSet].map((partner, index) => {
+              const isClone = index >= partners.length;
+              return (
+                <a
+                  key={`${partner.name}-${index}`}
+                  href={partner.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={partner.name}
+                  aria-label={partner.name}
+                  aria-hidden={isClone || undefined}
+                  tabIndex={isClone ? -1 : undefined}
+                  className={`mr-6 flex h-24 w-44 shrink-0 items-center justify-center p-4 transition-opacity hover:opacity-80 ${isClone ? "motion-reduce:hidden" : ""}`}
+                >
+                  <img
+                    src={partner.logo}
+                    alt={isClone ? "" : `${partner.name} logo`}
+                    className="max-h-full max-w-full object-contain"
+                    loading="lazy"
+                  />
+                </a>
+              );
+            })}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">

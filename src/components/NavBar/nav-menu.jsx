@@ -10,8 +10,8 @@ export const navLinks = [
   { title: "Home", href: "#home" },
   { title: "About", href: "#about" },
   { title: "Projects", href: "#projects" },
-  { title: "Partnerships", href: "#partnerships" },
   { title: "Services", href: "#services" },
+  { title: "Partnerships", href: "#partnerships" },
   { title: "Contact", href: "#contact" },
 ];
 
